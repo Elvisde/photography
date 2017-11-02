@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="css/regist.css">
+ </head>
+ <body>
+      <header>
+	      <ul class="lt">
+		      <li><a href="index.html" class="selected">图片摄影</a></li>
+			  <li><a href="activity.html">活动</a></li>
+			  <li><a href="work_index.html">作品</a></li>
+			  <li><a href="yd_index.html">营地</a></li>
+			  <li><a href="gz.html">展厅</a></li>
+			  <li><a href="sys.html">摄影师</a></li>			 
+          </ul>
+		  <div  class="gt"> 
+		      <input type="text" placeholder="请输入关键字">
+			  <a href="login.html">登陆</a><b></b><a href="regist.html">注册</a>
+			  <a href="img_post.html" class="release">&nbsp;发布</a>
+	   </div>
+	</header>
+    <section>
+     <p>欢迎注册摄影网,注册成功后,您可以登录使用任何产品!<span class="gt">已有账号?&nbsp;去<a href="#" class="no_decoration">登陆</a></span></p>
+     <div id="regist_body" class="give_table">
+	      <p><span>注册</span></p>
+	      <form action="404.html" method="post">
+               <ul>
+					 <li><span>*</span>用户名:</li>
+				     <li><input type="text" placeholder="请输入用户名" required name="username" id="username" pattern="^[a-zA-Z][0-9a-zA-Z]{5,17}$"></li>
+					 <li></li>
+			   </ul>
+			   <ul>
+					 <li><span>*</span>密码:</li>
+					 <li><input type="password" placeholder="请输入密码" required name="pwd" id="pwd" pattern="^[0-9a-zA-Z]{6,16}$"></li>
+					 <li></li>
+			   </ul>
+                <ul>
+					 <li><span>*</span>确认密码:</li>
+					 <li><input type="password" placeholder="再次输入密码" required name="qpwd" id="qpwd"></li>
+					 <li></li>
+			   </ul>
+			    <ul>
+					 <li><span>*</span>手机号:</li>
+				     <li><input type="text" placeholder="11位手机号" required id="phone" name="phone" pattern="(\+86|0086)?\s*1[34578]\d{9}"></li>
+					 <li></li>							   
+			   </ul>
+			     <ul>
+					 <li>年龄:</li>
+				     <li><input type="number" max="65" min="18" placeholder="请输入您的年龄" id="age" name="age"
+					 pattern="(^(1[8-9])$)|(^([2-5]\d)$)|(^(6[0-5])$)"></li>
+					 <li></li>	   
+			   </ul>
+			   <ul>
+					 <li>微博:</li>
+				     <li><input type="text" placeholder="请输入您的微博地址" id="wb" name="wb" pattern="(http|https)://.+"></li>
+					 <li></li>		   
+			   </ul>
+			   <ul>
+					 <li>邮箱:</li>
+				     <li><input type="text" placeholder="输入邮箱" id="email" name="email"
+					 pattern="^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$"></li>
+					 <li></li>		   
+			   </ul>
+			   <ul>
+					 <li>身份证号:</li>
+				     <li><input type="e-mail" placeholder="输入身份证" id="idcard" name="idcard"
+					 pattern="^(^\d{15}$|^\d{18}$|^\d{17}(\d|X|x)$)$"></li>
+					 <li></li>		   
+			   </ul>
+			   <ul>
+					 <li><span>*</span>验证码:</li>					 
+					 <li><input maxlength="4" type="text" placeholder="输入图片验证码" required id="yzm" name="yzm"><a href="#"></a></li>
+					 
+					 <li><svg id="cas" width="80" height="40"></svg><a href="javascript:yzm();">换一张</a></li> 
+			   </ul>
+			  
+			   <p><button></button></p>
+			   <div></div>
+	      </form>
+	 </div>
+	</section>
+	<footer>
+	      <p>About NetEase&nbsp;-&nbsp;<a href="#" class="a_reset">公司简介</a>&nbsp;-&nbsp;<a href="#" class="a_reset">联系方式</a>
+		  &nbsp;-&nbsp;<a href="#" class="a_reset">OAuth2.0</a>&nbsp;-&nbsp;<a href="#" class="a_reset">招聘信息</a>&nbsp;-&nbsp;
+		  <a href="#" class="a_reset">客户服务</a>&nbsp;-&nbsp;<a href="#" class="a_reset">相关法律</a>&nbsp;-&nbsp;<a href="#" class="a_reset">网络营销</a></p>
+	      <p>网易公司版权所有&nbsp;&copy1997-2016</p>
+	</footer>
+ </body>
+ <script src="javascript/jquery-1.11.3.js"></script>
+ <script>
+    yzm();
+	var arr=[];
+    $("#regist_body").on("mouseover","input",function(){
+		 if($(this).attr("id")!="yzm"){
+		$(this).parent().next("li").html("");
+	   $(this).parent().next("li").removeClass("himg").addClass("hlight");
+		 }
+	   var idn=$(this).attr("id");
+	   if(idn=="username"){
+	    $(this).parent().next("li").html("请输入6-18位字母或数字组成的用户名,不能以数字开头.") 
+	   }else if(idn=="pwd")
+	   {
+		 $(this).parent().next("li").html("6~16位密码,区分大小写.") 
+		}else if(idn=="qpwd")
+	   {
+		 $(this).parent().next("li").html("重复输入上一行密码.") 
+		}else if(idn=="phone")
+	   {
+		 $(this).parent().next("li").html("按正确格式输入11位手机号.") 
+		}else if(idn=="age")
+	   {
+		 $(this).parent().next("li").html("请输入年龄,18岁至65岁之间"); 
+		}else if(idn=="wb")
+	   {
+		 $(this).parent().next("li").html("例如:http://wk.xlweibo.com"); 
+		}else if(idn=="email")
+	   {
+		 $(this).parent().next("li").html("例如:184641801@qq.com"); 
+		}else if(idn=="idcard"){
+		 $(this).parent().next("li").html("请输入15位或18位身份证号码"); 
+		}
+	})
+
+      $("#regist_body").on("mouseout","input",function(){
+        if($(this).attr("id")!="yzm"){
+	    $(this).parent().next("li").html("");
+		$(this).parent().next("li").removeClass("hlight");
+		var me=$(this);
+        if(!(me[0].validity.valueMissing||me[0].value==""))
+		{
+		  yz(me);
+		}
+		}
+	  });
+
+     $("#regist_body").on("blur","input",function(){
+		 if($(this).attr("id")!="yzm"){
+        $(this).parent().next("li").html("");
+	   $(this).parent().next("li").removeClass("hlight").addClass("himg");
+	    }
+	   var me=$(this);
+	    if(!(me[0].value=="")){
+			 yz(me);         
+	    }
+		
+	})
+	function yz(me){
+		if(me.attr("id")!="yzm")
+	{
+	  if(me[0].validity.patternMismatch||me[0].validity.valueMissing||me[0].validity.rangeOverflow||me[0].validity.rangeUnderflow)
+	  {
+	    me.parent().next("li").html("<img src='images/error.ico'>");
+	  }else
+	  {
+		me.parent().next("li").html("<img src='images/ok.png'>"); 
+		 }
+	}
+      if(me.attr("id")=="qpwd")
+	 {
+		 if($("#qpwd").val()!=$("#pwd").val())
+		 {
+		   me.parent().next("li").html("<img src='images/error.ico'>");
+		   me[0].setCustomValidity('密码输入不一致，请重新输入.');//利用自定义验证属性控制密码不一致时阻止表单提交，但一定要在条件满足的时候清空
+		 }else{
+		   me.parent().next("li").html("<img src='images/ok.png'>");
+		    me[0].setCustomValidity("");
+		 }
+	  }
+	  if(me.attr("id")=="yzm")
+	  {
+	     if(!(me.val().toLowerCase()==arr.join("").toLowerCase()))
+		 {
+		    me[0].setCustomValidity('验证码输入错误，请重新输入'); 
+		  }else{
+		    me[0].setCustomValidity("");
+		 }
+		}
+	}
+	 function rand()
+	{
+	 var r=Math.floor(Math.random()*(255));
+	 var g=Math.floor(Math.random()*(255));
+     var b=Math.floor(Math.random()*(255));
+     return "rgb("+r+","+g+","+b+")";
+	}
+	function grx(min,max)
+	{
+	 var r=Math.floor(Math.random()*(max-min+1)+min);
+     return r;
+	}
+	function yzm(){
+	arr=[];
+	var rect=document.createElementNS("http://www.w3.org/2000/svg","rect");
+	rect.setAttribute("width",80);
+    rect.setAttribute("height",40);
+    rect.setAttribute("x",0);
+    rect.setAttribute("y",0);
+    rect.setAttribute("fill",rand());
+    cas.appendChild(rect);
+    var db="0123456789ABCDEFGHIJKLMNOPQRSTUVWSYZabcdefghyjklmnopqrstuvwxyz";
+	var x=20;
+	for(var i=0;i<4;i++)
+  {
+	var num=db[Math.floor(Math.random()*(db.length))];
+	arr.push(num);
+    var txt=document.createElementNS("http://www.w3.org/2000/svg","text");
+	txt.setAttribute("x",x+grx(-10,5));
+	txt.setAttribute("y",20+grx(-3,15));
+	txt.setAttribute("font-size",grx(20,27));
+	txt.setAttribute("fill",rand());
+	txt.setAttribute("rotate",grx(-45,45));
+	txt.innerHTML=num;
+    cas.appendChild(txt);
+	x+=13;
+  }
+  for(var i=0;i<3;i++)
+ {
+     var line=document.createElementNS("http://www.w3.org/2000/svg","line");
+     line.setAttribute("x1",grx(10,70));
+	 line.setAttribute("y1",grx(5,35));
+     line.setAttribute("x2",grx(10,70));
+	 line.setAttribute("y2",grx(5,35));
+	 line.setAttribute("stroke-width",1);
+     line.setAttribute("stroke",rand());
+     cas.appendChild(line);
+  }
+  for(var i=0;i<20;i++)
+  {
+     var circle=document.createElementNS("http://www.w3.org/2000/svg","circle");
+	 circle.setAttribute("cx",grx(10,70));
+	 circle.setAttribute("cy",grx(5,35));
+	 circle.setAttribute("r",1);
+     circle.setAttribute("fill",rand());
+     cas.appendChild(circle);
+  }  
+	}
+ </script>
+</html>

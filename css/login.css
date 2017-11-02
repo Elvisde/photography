@@ -1,0 +1,269 @@
+header
+{
+  width:1024px;
+  background-color:#F9F9F9;
+  height:97px;
+  margin:0px auto;
+}
+/*CSS RESET*/
+p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6
+{
+  padding:0px;
+  margin:0px;
+  list-style:none;
+}
+body
+{
+ font-size:12px;
+ color:#333;
+}
+.no-underline
+{
+ text-decoration:none;
+}
+.no-underline:hover
+{
+  color:#E4393C;
+  text-decoration:underline;
+}
+.lt
+{
+ float:left;
+}
+.gt
+{
+ float:right;
+}
+/*页头部分样式设计*/
+header>ul>li
+{
+ float:left;
+ line-height:97px;
+ margin-left:20px;
+ margin-right:20px;
+}
+header>ul>li>a
+{
+ color:#0099FF;
+ font-size:20px;
+ text-decoration:none;
+ font-weight:bold;
+}
+a.a_reset
+{
+ color:#999;
+ text-decoration:none;
+}
+a.a_reset:hover
+{
+  color:#E4393C;
+  text-decoration:underline;
+}
+a.no_decoration
+{
+ text-decoration:none;
+ color:#005aa0;
+}
+a.no_decoration:hover
+{
+  color:#E4393C;
+  text-decoration:underline;
+}
+.selected
+{
+  font-size:30px;
+  color:#CD583E;
+}
+header>div.gt>input
+{
+  background:#EBEBEB url("../images/ajpg_03.jpg") no-repeat 135px 5px;
+  border:none;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-right:20px;
+  width:134px;
+  margin-top:36px; 
+  margin-right:20px;
+}
+header>div.gt
+{
+ margin-right:12px;
+ position:relative;
+ width:363px;
+ height:61px;
+}
+header>div.gt>a
+{
+ text-decoration:none;
+}
+a.release
+{
+  padding:5px 16px;
+  background:url("../images/index_03.jpg") no-repeat 6px 5px;
+  background-color:#666;
+  color:#fff;
+  border-radius:4px;
+  padding-right:8px;
+  position:absolute;
+  top:57px;
+  left:298px;
+}
+header>div.gt>a:nth-child(4)
+{
+ margin-right:20px;
+}
+header>div.gt>a:nth-child(2),header>div.gt>a:nth-child(4)
+{
+color:#333;
+font-weight:bold;
+}
+header>div.gt>b
+{
+  border-left:2px solid #333333;
+  margin:0px 10px;
+}
+header>div.gt>a:nth-child(2):hover,header>div.gt>a:nth-child(4):hover
+{
+ color:#E4393C;
+ text-decoration:underline;
+}
+.give_table:before
+{
+  content:"";
+  display:table;
+}
+section
+{
+  width:900px;
+  margin:0px auto;
+}
+section>p
+{
+ padding:25px 0px;
+ font-family:"microsoft yahei","Arial";
+}
+#regist_body
+{
+  margin-top:50px;
+ width:900px;
+ background-color:#FBFBFB;
+}
+
+#regist_body>p
+{
+margin: 30px 50px;
+font-size: 25px;
+color: #E4393C;
+font-family:"microsoft yahei";
+}
+.box:after
+{
+  content:"";
+  display:block;
+  clear:both;
+}
+/*登录窗口*/
+#regist_body>div>dl>dt
+{
+ float:left;
+ color:#333;
+ font-family:"microsoft yahei";
+ font-size:14px;
+}
+#regist_body>div>dl>dd
+{
+ float:left;;
+}
+#regist_body>div>dl
+{
+ overflow:hidden;
+ margin-bottom:30px;
+}
+#regist_body>div>dl>dt
+{
+ width:50px;
+ text-align:right;
+ height:30px;
+ margin-top: 9px;
+ margin-right: 20px;
+}
+#regist_body>div>dl>dd>input
+{
+   width:288px;
+   padding-top:10px;
+   padding-bottom:10px;
+   border-radius:5px;
+   border:1px solid #aaa;
+   padding: 8px 10px;
+   vertical-align: middle;
+   font-size: 14px;
+   outline: none;
+}
+#regist_body>div
+{
+  margin-left:250px;
+  margin-top:64px;
+}
+#regist_body>div>dl:nth-child(3)>dd>input
+{
+  width: 60px;
+  height:18px;
+  margin-left: 30px;
+  vertical-align:top;
+  position:relative;
+  top:3px;
+}
+#regist_body>div>dl:nth-child(4)>dd>input
+{
+  width:13px;
+  vertical-align:sub;
+}
+#regist_body>div>dl:nth-child(4)
+{
+ height:15px;
+}
+#regist_body>div>dl:last-child>dd>button
+{
+background-color: #FF9933;
+color: #fff;
+padding: 8px 25px;
+border-radius: 5px;
+margin-bottom: 150px;
+font-size: 16px;
+outline: none;
+font-weight: bold;
+}
+/*尾部*/
+footer
+{
+  width:1024px;
+  margin:0px auto;
+  padding-top:30px;
+  padding-bottom:20px;
+  margin-top:100px;
+}
+footer>p
+{
+ text-align:center;
+}
+footer>p:nth-child(2)
+{
+ margin-top:10px;
+}
+#regist_body>div>dl:nth-child(3)>dd>a
+{
+  color: #0099FF;
+text-decoration: none;
+position: relative;
+left: 15px;
+bottom: 6px;
+}
+input::-webkit-input-placeholder{
+ font-size:12px;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+ background-color:#fff;
+}
+input::-moz-placeholder{
+ font-size:12px;
+}

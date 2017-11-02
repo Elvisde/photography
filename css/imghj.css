@@ -1,0 +1,12 @@
+div.scroll_main_2>div:nth-child(1)
+{
+ border-right:none;
+}
+div.scroll_main_2>div:nth-child(1)
+{
+  width:100%;
+}
+div.scroll_main_2>div:nth-child(1)>ul>li:nth-child(4)
+{
+ text-indent:2em;
+}

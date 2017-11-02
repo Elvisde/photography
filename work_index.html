@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/work_index.css">
+ </head>
+ <body>
+    <div id="head_if">
+      <iframe src="head.html" width="1024px" height="125px" frameborder="0" scrolling="no">
+	 </iframe>
+   </div>
+    <section>
+            <!--<p class="work_title">			
+			<a href="#" class="workhover">所有作品</a><a href="work_tj.html" >本期推荐</a><a href="new_sc.html">最新上传</a>
+			<button>换一批</button>
+			</p>-->
+			<div class="zuoping_title all">
+			   <p></p>
+			   <p><a href="work_index.html" class="zphover">所有作品</a><a href="work_tj.html">本期推荐</a><a href="new_sc.html">最新上传</a><button>换一批</button></p>
+			</div>
+			<div class="work_img_main box">
+			  <dl><dt><a href="#"><img src="images/work_1.PNG"></dt></a><dd><p>海边夜话</p><p><a href="#">戚老七</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_2.PNG"></dt></a><dd><p>云顶天宫</p><p><a href="#">南派三叔</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_3.PNG"></dt></a><dd><p>秦岭神树</p><p><a href="#">老痒</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_5.PNG"></dt></a><dd><p>七星木王工</p><p><a href="#">阿飞</a></p></dd></dl>
+              <dl><dt><a href="#"><img src="images/work_6.PNG"></dt></a><dd><p>海底世界</p><p><a href="#">老王</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_1.PNG"></dt></a><dd><p>云中野鹤</p><p><a href="#">叶亚尔</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_2.PNG"></dt></a><dd><p>世外桃源</p><p><a href="#">阿三</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_3.PNG"></dt></a><dd><p>海的韵律</p><p><a href="#">大飞</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_5.PNG"></dt></a><dd><p>风的声音</p><p><a href="#">阿三</a></p></dd></dl>
+              <dl><dt><a href="#"><img src="images/work_6.PNG"></dt></a><dd><p>海边钢琴师</p><p><a href="#">th00000</a></p></dd></dl>
+              <dl><dt><a href="#"><img src="images/work_1.PNG"></dt></a><dd><p>林中的卡夫卡</p><p><a href="#">村上西树</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_2.PNG"></dt></a><dd><p>夜色崖光</p><p><a href="#">大傻</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_3.PNG"></dt></a><dd><p>彩云追月</p><p><a href="#">阿西吧</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_5.PNG"></dt></a><dd><p>张家鼓楼</p><p><a href="#">戚老七</a></p></dd></dl>
+              <dl><dt><a href="#"><img src="images/work_6.PNG"></dt></a><dd><p>流光溢彩</p><p><a href="#">戚老头</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_1.PNG"></dt></a><dd><p>夜影</p><p><a href="#">戚老七</a></p></dd></dl>
+              <dl><dt><a href="#"><img src="images/work_1.PNG"></dt></a><dd><p>林中的卡夫卡</p><p><a href="#">村上西树</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_2.PNG"></dt></a><dd><p>夜色崖光</p><p><a href="#">大傻</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_3.PNG"></dt></a><dd><p>彩云追月</p><p><a href="#">阿西吧</a></p></dd></dl>
+			  <dl><dt><a href="#"><img src="images/work_5.PNG"></dt></a><dd><p>张家鼓楼</p><p><a href="#">戚老七</a></p></dd></dl>
+
+			</div>
+
+		<p class="page">
+	     <a href="#">1</a>
+         <a href="#">2</a>
+		 <a href="#">3</a>
+		 <a href="#">4</a>
+		 <a href="#">5</a>
+		 <a href="#">6</a>
+		 <a href="#">7</a>
+		 <a href="#">8</a>
+		 <a href="#">...</a>
+		 <a href="#">88</a>
+		 <button>下一页</button>
+	   </p>
+    <section>
+    <div id="foot_if">
+	 <iframe src="foot.html" width="1024px" height="220px" frameborder="0" scrolling="no">	 
+	 </iframe>
+	 </div>
+ </body>
+ <script>
+     document.querySelector(".work_img_main").onclick=function(e){
+     		 var target=e.target;
+     		 if(target.nodeName=="DD")
+     		 {
+     		   location.href="work_detail.html";
+     		 }
+     	 
+	 }
+ </script>
+</html>

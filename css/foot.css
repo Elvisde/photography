@@ -1,0 +1,38 @@
+footer
+{
+  width:1024px;
+  margin:0px auto;
+  padding-top:10px;
+  padding-bottom:8px;
+  margin-top:100px;
+  color: #555;
+ font-size: 13px;
+}
+footer>p
+{
+ text-align:center;
+}
+footer>p:nth-child(2)
+{
+ margin-top:10px;
+}
+a.a_reset
+{
+ color:#555;
+ text-decoration:none;
+}
+a.a_reset:hover
+{
+  color:#E4393C;
+  text-decoration:underline;
+}
+a.no_decoration
+{
+ text-decoration:none;
+ color:#005aa0;
+}
+a.no_decoration:hover
+{
+  color:#E4393C;
+  text-decoration:underline;
+}

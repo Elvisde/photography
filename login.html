@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+ </head>
+
+ <body>
+    <header>
+	      <ul class="lt">
+		      <li><a href="index.html" class="selected">图片摄影</a></li>
+			  <li><a href="activity.html">活动</a></li>
+			  <li><a href="#">作品</a></li>
+			  <li><a href="#">营地</a></li>
+			  <li><a href="#">展厅</a></li>
+			  <li><a href="#">摄影师</a></li>			 
+          </ul>
+		  <div  class="gt"> 
+		      <input type="text" placeholder="请输入关键字">
+			  <a href="login.html">登陆</a><b></b><a href="regist.html">注册</a>
+			  <a href="img_post.html" class="release">&nbsp;发布</a>
+	   </div>
+	</header>
+    <section> 
+	<form action="404.html" method="post">
+     <div id="regist_body" class="give_table box">
+	      <p><span>登陆</span></p>		
+		  <div>
+		  
+		       <dl>
+			        <dt>用户名:</dt>
+					<dd><input type="text" id="username" placeholder="请输入用户名" name="username" placeholder="请输入用户名" required pattern="^[a-zA-Z][0-9a-zA-Z]{5,17}$"></dd>
+			   </dl>
+		       <dl>
+			        <dt>密码:</dt>
+					<dd><input type="password" placeholder="请输入密码" required name="pwd" id="pwd" pattern="^[0-9a-zA-Z]{6,16}$"></dd>
+			   </dl>
+		       <dl>
+			        <dt>验证码:</dt>
+					<dd><svg id="cas" width="80" height="40"></svg><a href="javascript:yzm();">换一张</a><input type="text" maxlength="4" id="yzm"></dd>
+			   </dl>
+			    <dl>
+			        <dt></dt>
+					<dd><input type="checkbox">下次自动登录&nbsp;<a href="#" class="a_reset">忘记密码?</a>&nbsp;<a href="regist.html" class="a_reset">立即注册</a></dd>
+			   </dl>
+			    <dl>
+			        <dt></dt>
+					<dd><button>提交</button></dd>
+			   </dl>
+			   
+		  </div>
+		 
+		  </div>
+		  </form>
+    </section>
+    <footer>
+	      <p>About NetEase&nbsp;-&nbsp;<a href="#" class="a_reset">公司简介</a>&nbsp;-&nbsp;<a href="#" class="a_reset">联系方式</a>
+		  &nbsp;-&nbsp;<a href="#" class="a_reset">OAuth2.0</a>&nbsp;-&nbsp;<a href="#" class="a_reset">招聘信息</a>&nbsp;-&nbsp;
+		  <a href="#" class="a_reset">客户服务</a>&nbsp;-&nbsp;<a href="#" class="a_reset">相关法律</a>&nbsp;-&nbsp;<a href="#" class="a_reset">网络营销</a></p>
+	      <p>网易公司版权所有&nbsp;&copy1997-2016</p>
+	</footer>
+ </body>
+  <script src="javascript/jquery-1.11.3.js"></script>
+ <script>
+    yzm();
+	var arr=[];
+    function rand()
+	{
+	 var r=Math.floor(Math.random()*(255));
+	 var g=Math.floor(Math.random()*(255));
+     var b=Math.floor(Math.random()*(255));
+     return "rgb("+r+","+g+","+b+")";
+	}
+	function grx(min,max)
+	{
+	 var r=Math.floor(Math.random()*(max-min+1)+min);
+     return r;
+	}
+	function yzm(){
+	arr=[];
+	var rect=document.createElementNS("http://www.w3.org/2000/svg","rect");
+	rect.setAttribute("width",80);
+    rect.setAttribute("height",40);
+    rect.setAttribute("x",0);
+    rect.setAttribute("y",0);
+    rect.setAttribute("fill",rand());
+    cas.appendChild(rect);
+    var db="0123456789ABCDEFGHIJKLMNOPQRSTUVWSYZabcdefghyjklmnopqrstuvwxyz";
+	var x=20;
+	for(var i=0;i<4;i++)
+  {
+	var num=db[Math.floor(Math.random()*(db.length))];
+	arr.push(num);
+    var txt=document.createElementNS("http://www.w3.org/2000/svg","text");
+	txt.setAttribute("x",x+grx(-10,5));
+	txt.setAttribute("y",20+grx(-3,15));
+	txt.setAttribute("font-size",grx(20,27));
+	txt.setAttribute("fill",rand());
+	txt.setAttribute("rotate",grx(-45,45));
+	txt.innerHTML=num;
+    cas.appendChild(txt);
+	x+=13;
+  }
+  for(var i=0;i<3;i++)
+ {
+     var line=document.createElementNS("http://www.w3.org/2000/svg","line");
+     line.setAttribute("x1",grx(10,70));
+	 line.setAttribute("y1",grx(5,35));
+     line.setAttribute("x2",grx(10,70));
+	 line.setAttribute("y2",grx(5,35));
+	 line.setAttribute("stroke-width",1);
+     line.setAttribute("stroke",rand());
+     cas.appendChild(line);
+  }
+  for(var i=0;i<20;i++)
+  {
+     var circle=document.createElementNS("http://www.w3.org/2000/svg","circle");
+	 circle.setAttribute("cx",grx(10,70));
+	 circle.setAttribute("cy",grx(5,35));
+	 circle.setAttribute("r",1);
+     circle.setAttribute("fill",rand());
+     cas.appendChild(circle);
+  }  
+	}
+
+  $("#regist_body").on("blur","input",function(){
+	  if($(this).attr("id")=="username")
+	  {
+		 if($(this)[0].validity.patternMismatch)
+	    {
+	      $(this)[0].setCustomValidity('请输入6-18位字母或数字组成的用户名,不能以数字开头.');
+	    }else{
+		  $(this)[0].setCustomValidity('');
+		}
+      }else if($(this).attr("id")=="pwd")
+	  {
+	    if($(this)[0].validity.patternMismatch)
+	    {
+	      $(this)[0].setCustomValidity('6~16位密码,区分大小写.');
+	    }else{
+		  $(this)[0].setCustomValidity('');
+		}
+	  }else if($(this).attr("id")=="yzm")
+	  {
+	     if(!($(this).val().toLowerCase()==arr.join("").toLowerCase()))
+		 {
+		    $(this)[0].setCustomValidity('验证码输入错误，请重新输入'); 
+		  }else{
+		    $(this)[0].setCustomValidity("");
+		 }	    
+	  }
+	})
+ </script>
+</html>

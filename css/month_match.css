@@ -1,0 +1,380 @@
+p.activity_title
+{
+ width:1000px;
+ margin:20px auto;
+ margin-bottom: 38px;
+ margin-left: -30px;
+}
+p.activity_title>a
+{
+ display:inline-block;
+ width:85px;
+ font-size:16px;
+ text-decoration:none;
+ color:#0099FF;
+ font-weight:bold;
+ margin-right:20px;
+ text-align:center;
+}
+p.activity_title>a:first-child
+{
+ text-align:right;
+}
+section
+{
+ width:1000px;
+ margin:0px auto;
+ font-family:"microsoft yahei",Arial;
+}
+p.activity_title>lable
+{
+  margin-left:20px;
+  color:#FF9900;
+}
+p.activity_title>lable>input
+{
+ vertical-align:middle;
+}
+p.activity_title>lable:nth-child(5)
+{
+  margin-left:170px;
+}
+p.month_match_title
+{
+ border: 1px solid #999;
+ width: 728px;
+ height: 34px;
+ border-bottom: 2px solid #999;
+ background-image:linear-gradient(to bottom,#fff 0%,#FEFCFE 40%,#F5E3EF 100%);
+}
+p.month_match_title>button
+{
+background-image: linear-gradient(to bottom,#EFC1DA 0%,#BA0D68 40%,#B20C5A 100%);
+padding: 5px 10px;
+color: #fff;
+font-size: 18px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+float: left;
+margin-top: 2px;
+margin-left: 4px;
+border-bottom: none;
+}
+ul.month_match_1>li
+{
+  width:338px;
+  padding:10px;
+  background-color:#FCF9FB;
+  float:left;
+  margin-right:10px;
+  border:1px solid #E0E0E0;
+  margin-bottom:10px;
+}
+#content
+{
+  margin-top:10px;
+  margin-left:20px;
+}
+ul.month_match_1
+{
+ margin-top:10px;
+ overflow:hidden;
+ color:#B20C5A;
+ font-family:"microsoft yahei",Arial;
+ width:740px;
+}
+ul.month_match_1>li:nth-child(4)>p>img
+{
+  width:334px;
+}
+ul.month_match_1>li p
+{
+  margin:8px 0px;
+  color:#B20C5A;
+  font-family:"microsoft yahei",Arial;
+  font-weight:bold;
+}
+ul.month_match_1>li>p:nth-child(3)>button
+{
+   padding:4px 8px;
+   background-color:#B15983;
+   float:right;
+   color:#fff;
+   border-radius:6px;
+   margin-top:-4px;
+}
+ul.month_match_1>li>ul:last-child>li
+{
+ line-height:22px;
+ list-style-type:disc;
+ list-style-position:inside;
+}
+aside
+{
+  margin-right:12px;
+  margin-top:10px;
+  width:226px;
+}
+aside>div:first-child
+{
+  background-image:linear-gradient(to top,#fff 0%,#FCF5F9 50%,#F4DEE9 100%);
+  border:1px solid #E3C0D1;
+  padding:10px;
+  padding-bottom:0px;
+}
+aside>div:first-child>p:nth-child(1)
+{ 
+  font-weight:bold;
+  color:#B20C5A;
+  font-family:"microsoft yahei",Arial;
+  margin-bottom:5px;
+}
+aside>div:first-child>p:nth-child(2)
+{
+   margin-bottom:5px;
+}
+aside>div:first-child>p:nth-child(4)
+{
+ height:3px;
+}
+aside>p:nth-child(2)>b:nth-child(1)
+{
+  display:inline-block;
+  background-color:#891B4F;
+  width:81px;
+  height:3px;
+  vertical-align: text-top;
+}
+aside>p:nth-child(2)>b:nth-child(2)
+{
+  display:inline-block;
+  background-color:#891B4F;
+  width:64px;
+  height:3px;
+  vertical-align: text-top;
+  margin-left:3px
+}
+aside>p:nth-child(2)>b:nth-child(3)
+{
+  display:inline-block;
+  background-color:#D984AC;
+  width:46px;
+  height:3px;
+  vertical-align: text-top;
+  margin-left:3px
+}
+aside>p:nth-child(2)>b:nth-child(4)
+{
+  display:inline-block;
+  background-color:#B15983;
+  width:26px;
+  height:3px;
+  vertical-align: text-top;
+  margin-left:3px
+}
+aside>p:nth-child(2)
+{
+  height: 2px;
+}
+aside>p:nth-child(3)>a>img
+{
+ max-width:228px;
+}
+div.month_match_4
+{
+ margin-top:10px;
+}
+div.month_match_4>p
+{
+  background-image:linear-gradient(to bottom,#FCF9FB 0%,#F3DCEB 100%);
+  border:1px solid #E3C0D1;
+  border-bottom:1px solid #B15983;
+  padding:5px 10px;
+  padding-bottom:0px;
+  height:29px;
+}
+div.month_match_4>p>a
+{
+ display:inline-block;
+ text-decoration:none;
+ width:80px;
+ height:17px;
+ background-color:#FCF9FB;
+ color:#B20C5A;
+ padding:5px 15px;
+ border:1px solid #B15983;
+ border-bottom:none;
+ margin-top:2px;
+}
+div.month_match_4>div
+{
+ background-color:#FCF9FB;
+ border:1px solid #E3C0D1;
+ border-top:none;
+ padding-bottom:20px;
+}
+div.month_match_4>div>ul>li>p
+{
+  float:left;
+}
+div.month_match_4>div>ul>li>div
+{
+ float:right;
+}
+div.month_match_4>div>ul
+{
+ padding:0px 10px;
+ padding-top:15px;
+}
+div.month_match_4>div>ul>li:first-child
+{
+  margin-bottom:10px;
+  color:#333;
+  font-weight:bold;
+}
+div.month_match_4>div>ul>li:nth-child(2)>p>a>img
+{
+ max-width:106px;
+}
+div.month_match_4>div>ul>li:nth-child(2)>div
+{
+  width:90px;
+  font-family:"microsoft yahei",Arial;
+  color:#333;
+}
+div.month_match_4>div>ul>li:nth-child(3)
+{
+  margin-top:20px;
+  margin-bottom:10px;
+  color:#333;
+  font-weight:bold;
+}
+div.month_match_4>div>ul>li:nth-child(4)>div
+{
+  width:90px;
+  font-family:"microsoft yahei",Arial;
+  color:#333;
+}
+div.month_match_4>p>span
+{
+ float:right;
+ margin-top:5px;
+}
+div.month_match_5
+{
+  padding:20px 5px;
+}
+div.month_match_5>p:first-child
+{
+  border:1px solid #E0E0E0;
+  width: 197px;
+  padding: 3px;
+  margin:0px auto;
+ }
+ div.month_match_5>p>a>img
+ {
+   max-width:195px;
+ }
+ div.month_match_5>p:nth-child(2)
+ {
+   width: 197px;
+   margin:10px auto;
+   font-size:14px;
+   text-align:center;
+ }
+ div.month_match_5>div:nth-child(3)
+ {
+   width: 197px;
+   margin:10px auto;
+   line-height:18px;
+ }
+ div.month_match_4>div.month_match_5:nth-child(2)
+ {
+  border-bottom:none;
+  padding-bottom:5px;
+ }
+  div.month_match_4>div.month_match_5:nth-child(3)
+  {
+   padding-top:0px;
+   border-bottom:1px dashed #E0E0E0;
+   padding-bottom:0px;
+  }
+  div.month_match_4>ul:nth-child(4)
+  {
+    border:1px solid #E3C0D1;
+	border-top:none;
+	background-color:#FCF9FB;
+	padding:10px 15px;
+	line-height:20px;
+  }
+   div.month_match_4>ul:nth-child(4)>li
+   {
+    list-style-type:disc;
+	list-style-position:inside;
+   }
+   div.month_match_4>ul:nth-child(4)
+   {
+    padding-bottom:25px;
+   }
+   p.month_match_title>a
+   {
+    float:right;
+	margin-top:10px;
+	margin-right:16px;
+   }
+   div.month_match_title_main
+   {
+    border:1px solid #E0E0E0;
+	border-top:none;
+	background-color:#FCF9FB;
+	width:708px;
+	padding:10px;
+	padding-bottom:16px;
+   }
+   div.month_match_title_main>div:last-child
+   {
+     width:340px;
+	 margin-top:1px;
+   }
+   div.month_match_title_main>div:last-child>div>dl:nth-child(2)>dt
+   {
+    margin-right:20px;
+   }
+   div.month_match_title_main>div:first-child
+   {
+    padding:5px;
+	border:1px solid #E0E0E0;
+	padding-bottom:3px;
+	width:344px;
+   }
+   div.month_match_title_main>div:last-child>div>dl>dd
+   {
+    margin-top:5px;
+	margin-bottom:10px;
+	color:#666;
+   }
+    div.month_match_title_main>div:last-child>ul
+	{
+	 line-height:22px;
+	}
+	div.month_match_title_main>div:last-child>ul>li
+	{
+	 list-style-type:disc;
+	 list-style-position:inside;
+	}
+	div.month_match_title_main>div:first-child>p
+	{
+	 margin:10px 0px;
+	 font-size:18px;
+	 color:#333;
+	 font-weight:bold;
+	 font-family:"microsoft yahei",Arial;
+	}
+	div.month_match_title_main>div:first-child>div
+	{
+	 line-height:20px;
+	}
+	#main
+	{
+	 margin-top: 40px;
+	}

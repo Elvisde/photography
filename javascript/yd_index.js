@@ -1,0 +1,12 @@
+$("#main").on("click","A",function(){
+  location.href="yd_detail.html";
+})
+$("aside").on("click","A",function(){
+  location.href="yd_detail.html";
+})
+$("#pl>ul>li:nth-child(1)").on("click","A",function(){
+   location.href="yd_ht.html"; 
+})
+$("#pl>ul>li:last-child").on("click","A",function(){
+   location.href="index.html"; 
+})

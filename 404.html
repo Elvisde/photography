@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/404.css">
+ </head>
+ <body>
+    <section>
+	    <svg id="cas" width="1880" height="900">
+              
+	     </svg>
+		 <div id="content">
+		    <p><img src="images/404.PNG"></p>
+			<p>哎呀...服务器繁忙,请联系管理员.</p>
+			<p><a href="index.html">首页</a><a href="login.html">登录</a></p>
+			<p>还剩下<span id="backtime">10</span>秒返回首页</p>
+		 </div>
+	</section>
+ </body>
+ <script>
+ var w=window.screen.width;
+ if(w<1400)
+ {
+    cas.setAttribute("width","1340px");
+	cas.setAttribute("height","700px");
+ }
+ var timer=setInterval(function(){
+   backtime.innerHTML-=1;
+   if(backtime.innerHTML==0)
+  {
+	  timer=null;
+      clearInterval(timer);
+	  location.href="index.html";
+	  }
+  },1000)
+
+      function rand()
+	{
+	 var r=Math.floor(Math.random()*(256));
+	 var g=Math.floor(Math.random()*(256));
+     var b=Math.floor(Math.random()*(256));
+     return "rgb("+r+","+g+","+b+")";
+	}
+	function bh(min,max)
+	{
+	 return parseInt(Math.random()*(max-min+1)+min);
+	}
+	 var timer=null;
+	timer=setInterval(function(){
+	  var circle=document.createElementNS("http://www.w3.org/2000/svg","circle");
+	  var cx=bh(10,1880);
+      circle.setAttribute("cx",cx);
+	  circle.setAttribute("cy",bh(10,900));
+	  circle.setAttribute("r",bh(5,100));
+      circle.setAttribute("fill",rand());
+      cas.appendChild(circle);
+	  var timers=null;
+	  var moved=0;
+	  var x=bh(-5,5);
+	  var y=bh(-5,5);
+	  var op=1;
+	  timers=setInterval(function(){
+		  moved++;
+	      var cxx=parseInt(circle.getAttribute("cx"))+x;
+	      var cyy=parseInt(circle.getAttribute("cy"))+y;
+           circle.setAttribute("cx",cxx);
+	       circle.setAttribute("cy",cyy);
+		   circle.style.opacity=op;
+		   op-=0.1;
+		   if(moved==15){
+		     clearInterval(timers);
+		     timers=null;
+			 cas.removeChild(circle);
+		   }
+	  },200)
+	},200)
+ </script>
+</html>
